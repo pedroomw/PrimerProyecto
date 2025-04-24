@@ -1,0 +1,16 @@
+ @{
+    ViewData["Title"] = "Index";
+}
+
+<div>
+    <h1>Ahora, la información del integrante seleccionado</h1>
+    <h3>Nombre:</h3>
+    <p>@ViewBag.DatosPersonales.Nombre</p>
+    <h3>Apellido:</h3>
+    <p>@ViewBag.DatosPersonales.Apellido</p>
+    <h3>Fecha de nacimiento:</h3>
+    <p>@ViewBag.DatosPersonales.FechaNacimiento</p>
+     <img src=@ViewBag.DatosPersonales.Foto alt=@ViewBag.DatosPersonales.Nombre>  
+    
+</div>     
+  <a href = '@Url.Action("Index", "Home")' > Inicio </a>

@@ -1,0 +1,16 @@
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div>
+<h3>Hobbies:</h3>
+<p>@ViewBag.DatosInteres.Hobbies</p>
+<h3>Series favoritas:</h3>
+<p>@ViewBag.DatosInteres.SeriesFavoritas</p>
+<h3>Amigos:</h3>
+<p>@ViewBag.DatosInteres.Amigos</p>
+<h3>Gustos escolares:</h3>
+<p>@ViewBag.DatosInteres.GustosEscolares</p>
+</div>
+<a href= '@Url.Action("Index", "Home")'>Inicio</a>

@@ -1,0 +1,21 @@
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div>
+    <h1>Ahora, la información del integrante seleccionado</h1>
+
+    @foreach (DatoFamiliar datoFamiliar in @ViewBag.DatosFamiliares)
+    {
+        
+    <h2>@datoFamiliar.Nombre</h2>
+    <h3>Apellido:</h3>
+    <p>@datoFamiliar.Apellido</p>
+    <h3>Parentesco:</h3>
+    <p>@datoFamiliar.Parentesco</p>
+    <h3>Descripción:</h3>
+    <p>@datoFamiliar.Descripción</p> 
+    }
+    
+  </div>
+  <a href = '@Url.Action("Index", "Home")' > Inicio </a>

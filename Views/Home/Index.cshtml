@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<head>
+    <link rel="stylesheet" href='estilo.css'>
+</head>
+
+<section>
+    <img src="~/Logo_FPP.png" alt ="Logo">
+    <h1>¡Conociendo a los tres mosqueperros!</h1>
+    <p>Bienvenidos a la pagina donde nos conoceran.</p>
+    <p>¿Estan listos?</p>
+
+@foreach (Integrante integrantes in @ViewBag.Integrantes.Values)
+{
+    <div>
+        <h2>@integrantes.DatosPersonales.Nombre</h2>
+        <img src=@integrantes.DatosPersonales.Foto alt=@integrantes.DatosPersonales.Nombre>   
+        <a href='@Url.Action("SelectIntegrante", "Home", new {dni=integrantes.DNI})' >Ir a los datos personales</a>    
+        <a href='@Url.Action("MostrarDatosFamiliares", "Home", new {dni=integrantes.DNI})' >Ir a los datos familiares</a>  
+        <a href='@Url.Action("MostrarDatosInteres", "Home", new {dni=integrantes.DNI})' >Ir a los datos intereses</a>  
+    </div>
+}
+</section>       
+
